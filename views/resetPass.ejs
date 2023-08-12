@@ -1,0 +1,31 @@
+<h2 class="text-center">Create a new Password</h2>
+<div class="d-flex justify-content-center">
+	<form
+		method="post"
+		action="/users/create-password/<%= token.user %>?t=<%= token.id %>"
+	>
+		<div class="row mb-3">
+			<label for="password" class="form-label">Password</label>
+			<input
+				type="password"
+				name="password"
+				class="form-control"
+				id="password"
+				placeholder="Enter a desired Password"
+				required
+			/>
+		</div>
+		<div class="row mb-3">
+			<label for="cpassword" class="form-label">Confirm Password</label>
+			<input
+				type="password"
+				name="cpassword"
+				class="form-control"
+				id="cpassword"
+				placeholder="Confirm Password"
+				required
+			/>
+		</div>
+		<button type="submit" class="btn btn-primary">Create Password</button>
+	</form>
+</div>

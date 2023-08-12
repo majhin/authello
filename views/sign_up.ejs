@@ -1,0 +1,55 @@
+<h2 class="text-center">Sign Up</h2>
+<div class="d-flex justify-content-center">
+	<form method="post" action="/users/create-user">
+		<div class="row mb-3">
+			<label for="name" class="form-label">Name</label>
+			<input
+				type="text"
+				name="name"
+				class="form-control"
+				id="name"
+				placeholder="Enter your name"
+			/>
+		</div>
+		<div class="row mb-3">
+			<label for="email" class="form-label">Email address</label>
+			<input
+				type="email"
+				name="email"
+				class="form-control"
+				id="email"
+				placeholder="Enter your Email"
+			/>
+		</div>
+		<div class="row mb-3">
+			<label for="password" class="form-label">Password</label>
+			<input
+				type="password"
+				name="password"
+				class="form-control"
+				id="password"
+				placeholder="Enter a desired password"
+			/>
+		</div>
+		<div class="row mb-3">
+			<label for="cpassword" class="form-label">Confirm Password</label>
+			<input
+				type="password"
+				name="cpassword"
+				class="form-control"
+				id="cpassword"
+				placeholder="Confrim your desired password"
+			/>
+		</div>
+		<div
+			class="g-recaptcha"
+			data-sitekey="<%= process.env.RECAPTCHA_SITE_KEY %>"
+		></div>
+		<button type="submit" class="btn btn-primary">Sign Up</button>
+		<div class="row mb-3">
+			<label class="form-label"
+				>Already have an ID ? <a href="/">Sign In Here</a></label
+			>
+		</div>
+	</form>
+</div>

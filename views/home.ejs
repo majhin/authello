@@ -1,0 +1,54 @@
+<h2 class="text-center">Sign In</h2>
+<div class="d-flex justify-content-center">
+	<form id="sign-in-form" method="post" action="/users/create-session">
+		<div class="row mb-3">
+			<label for="email" class="form-label">Email address</label>
+			<input
+				type="email"
+				name="email"
+				class="form-control"
+				id="email"
+				placeholder="Enter your Email"
+				required
+			/>
+		</div>
+		<div class="row mb-3">
+			<label for="password" class="form-label">Password</label>
+			<input
+				type="password"
+				name="password"
+				class="form-control"
+				id="password"
+				placeholder="Enter your password"
+				required
+			/>
+		</div>
+		<div
+			class="g-recaptcha"
+			data-sitekey="<%= Process.env.RECAPTCHA_SITE_KEY %>"
+		></div>
+		<button class="btn btn-primary" type="submit">Sign In</button>
+		<div class="row mb-3">
+			<a
+				class="btn btn-sm btn-outline-secondary m-1"
+				href="/users/forgot-password"
+				role="button"
+				>Forgot Password</a
+			>
+			<label for="sign-up" class="form-label">Don't have an ID yet ?</label>
+			<a
+				id="sign-up"
+				class="btn btn-sm btn-outline-secondary m-1"
+				href="/users/sign-up"
+				role="button"
+				>Sign Up Here</a
+			>
+			<a
+				class="btn btn-sm btn-outline-secondary m-1"
+				href="/users/auth/google"
+				role="button"
+				>GOOGLE Sign In / Sign Up</a
+			>
+		</div>
+	</form>
+</div>

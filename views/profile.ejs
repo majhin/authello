@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center">
+	<% if (locals.user) { %>
+	<p class="h6 me-5 mt-2"><%= user.email %></p>
+	<a
+		class="btn btn-sm btn-outline-secondary m-1"
+		href="/users/change-password/<%= user.id %>"
+		role="button"
+		>Change Password</a
+	>
+	<form class="m-1" action="/users/sign-out" method="post">
+		<button class="btn btn-sm btn-outline-secondary" type="submit">
+			Log Out
+		</button>
+	</form>
+	<% } %>
+</div>

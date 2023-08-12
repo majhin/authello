@@ -1,0 +1,19 @@
+<h2 class="text-center">Forgot Password</h2>
+<div class="d-flex justify-content-center">
+	<form method="post" action="/users/forgot-password">
+		<div class="row mb-3">
+			<label for="email" class="form-label">Email address</label>
+			<input
+				type="email"
+				name="email"
+				class="form-control"
+				id="email"
+				placeholder="Enter your Email"
+				required
+			/>
+		</div>
+		<button type="submit" class="btn btn-primary">
+			Reset Password via Email
+		</button>
+	</form>
+</div>
